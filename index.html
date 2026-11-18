@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Futsal | História e Cultura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo-container">
+            <!-- Ícone vetorial de bola/quadra para não quebrar imagem -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="12 7 16.5 10.2 14.8 15.5 9.2 15.5 7.5 10.2"></polygon>
+            </svg>
+            <span>Arena Futsal</span>
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="noticia01.html">História</a></li>
+                <li><a href="#rodape">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="titulo-noticias">A Arte das Quadras</h1>
+        <p class="subtitulo-noticias">Explore a origem, a evolução tática e a importância social do futsal no Brasil e no mundo.</p>
+
+        <div class="noticias">
+            <!-- Card 1 -->
+            <article class="card">
+                <div class="card-banner">1930 • Origem</div>
+                <div class="card-corpo">
+                    <h3>A História do Futsal: De Montevidéu para o Mundo</h3>
+                    <p>Conheça como o professor Juan Carlos Ceriani criou o esporte na ACM do Uruguai e como o Brasil se tornou a maior potência da modalidade.</p>
+                    <div class="botoes">
+                        <button class="botao-reacao" type="button">👍 <span>0</span></button>
+                        <button class="botao-reacao" type="button">❤️ <span>0</span></button>
+                    </div>
+                    <a href="noticia01.html" class="btn-saiba-mais">Ler matéria completa</a>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <div class="card-banner">Formação • Base</div>
+                <div class="card-corpo">
+                    <h3>A Importância do Futsal na Formação de Atletas</h3>
+                    <p>Espaço reduzido, raciocínio rápido e controle de bola: entenda por que craques como Falcão, Neymar e Messi começaram nas quadras.</p>
+                    <div class="botoes">
+                        <button class="botao-reacao" type="button">👍 <span>0</span></button>
+                        <button class="botao-reacao" type="button">❤️ <span>0</span></button>
+                    </div>
+                    <a href="noticia01.html" class="btn-saiba-mais">Ler matéria completa</a>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <div class="card-banner">Social • Escola</div>
+                <div class="card-corpo">
+                    <h3>Inclusão Social e o Papel nas Escolas</h3>
+                    <p>O esporte mais praticado nas escolas brasileiras vai muito além da competição: ele ensina trabalho em equipe, disciplina e cidadania.</p>
+                    <div class="botoes">
+                        <button class="botao-reacao" type="button">👍 <span>0</span></button>
+                        <button class="botao-reacao" type="button">❤️ <span>0</span></button>
+                    </div>
+                    <a href="noticia01.html" class="btn-saiba-mais">Ler matéria completa</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer id="rodape">
+        <p>Desenvolvido por Teotonio Jr © 2026 • Projeto de Desenvolvimento de Sistemas</p>
+    </footer>
+
+    <script>
+        // Seleciona todos os botões de reação (Curtir e Amei)
+        const botoes = document.querySelectorAll('.botao-reacao');
+
+        botoes.forEach(botao => {
+            botao.addEventListener('click', (evento) => {
+                const contador = evento.currentTarget.querySelector('span');
+                let valorAtual = parseInt(contador.textContent, 10);
+                contador.textContent = valorAtual + 1;
+            });
+        });
+    </script>
+</body>
+
+</html>
